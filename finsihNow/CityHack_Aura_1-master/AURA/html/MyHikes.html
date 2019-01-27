@@ -28,10 +28,10 @@
       <a href="#">Log out</a>
       </p>
   </li>
-  <li><a href="#"><img src="../images/myhikes.png" width="10%" alt="my hikes" title="My Hikes"></a></li>
-  <li><a href="#"><img src="../images/joinhike.png" width="10%" alt="join hikes" title="Join existing hike"></a></li>
-  <li><a href="#"><img src="../images/addhike.png" width="10%" alt="add hike" title="Add hike"></a></li>
-  <li><a href="#"><img src="../images/upcoming.png" width="10%" alt="my upcoming hikes" title="My upcoming hikes"></a></li>
+  <li><a href="MyHikes.html"><img src="../images/myhikes.png"  alt="my hikes" title="My Hikes"></a></li>
+        <li><a href="JoinHikePage.html"><img src="../images/joinhike.png"  alt="join hikes" title="Join existing hike"></a></li>
+        <li><a href="AddHikes.html"><img src="../images/addhike.png"  alt="add hike" title="Add hike"></a></li>
+        <li><a href="JoinHikePage.html.myHikes"><img src="../images/upcoming.png"  alt="my upcoming hikes" title="My upcoming hikes"></a></li>
 </ul>
     </div>
     <div class="myHikes">
@@ -196,7 +196,7 @@
         for (var i = 0; i < 20; i++) {
             var difficult_gap;
             difficult_gap = Math.abs(HKtrail[i].Difficulty - avg_diff);
-            HKtrail[i].Score = view_sum[HKtrail[i].ViewType] + (5.00-difficult_gap)*place_count;
+            HKtrail[i].Score = view_sum[HKtrail[i].ViewType] + (5.00-difficult_gap)*(place_count/4);
         }
         //sort the trails by Score
         var rank=[];
